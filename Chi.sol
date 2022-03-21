@@ -22,7 +22,10 @@ contract Chi is ERC20 {
     mapping(address => mapping(address => uint256)) allowed;
     uint256 totalSupply_;
 
-    
+    constructor(uint256 total) {
+        totalSupply_ = total;
+        balances[msg.sender] = totalSupply_;
+    }
 
     
 
